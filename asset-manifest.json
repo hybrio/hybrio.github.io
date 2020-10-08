@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.5f361e03.chunk.css",
-    "main.js": "/static/js/main.c833fe61.chunk.js",
-    "main.js.map": "/static/js/main.c833fe61.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.60ff7257.js",
-    "runtime-main.js.map": "/static/js/runtime-main.60ff7257.js.map",
-    "static/js/2.84e57e79.chunk.js": "/static/js/2.84e57e79.chunk.js",
-    "static/js/2.84e57e79.chunk.js.map": "/static/js/2.84e57e79.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.8931d4db5ff4f719fbdb92a161254ff3.js": "/precache-manifest.8931d4db5ff4f719fbdb92a161254ff3.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.84e57e79.chunk.js.LICENSE.txt": "/static/js/2.84e57e79.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+    "main.css": "/single-page-site/static/css/main.5f361e03.chunk.css",
+    "main.js": "/single-page-site/static/js/main.bb2fb469.chunk.js",
+    "main.js.map": "/single-page-site/static/js/main.bb2fb469.chunk.js.map",
+    "runtime-main.js": "/single-page-site/static/js/runtime-main.1f5746ac.js",
+    "runtime-main.js.map": "/single-page-site/static/js/runtime-main.1f5746ac.js.map",
+    "static/js/2.748efb63.chunk.js": "/single-page-site/static/js/2.748efb63.chunk.js",
+    "static/js/2.748efb63.chunk.js.map": "/single-page-site/static/js/2.748efb63.chunk.js.map",
+    "index.html": "/single-page-site/index.html",
+    "precache-manifest.f600aa069cfab9b6b64d48deec9c53e9.js": "/single-page-site/precache-manifest.f600aa069cfab9b6b64d48deec9c53e9.js",
+    "service-worker.js": "/single-page-site/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/single-page-site/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.748efb63.chunk.js.LICENSE.txt": "/single-page-site/static/js/2.748efb63.chunk.js.LICENSE.txt",
+    "static/media/Alexander-CV.pdf": "/single-page-site/static/media/Alexander-CV.c59b5569.pdf",
+    "static/media/logo.svg": "/single-page-site/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.60ff7257.js",
-    "static/js/2.84e57e79.chunk.js",
+    "static/js/runtime-main.1f5746ac.js",
+    "static/js/2.748efb63.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.c833fe61.chunk.js"
+    "static/js/main.bb2fb469.chunk.js"
   ]
 }
