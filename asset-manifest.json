@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/single-page-site/static/css/main.5f361e03.chunk.css",
-    "main.js": "/single-page-site/static/js/main.bb2fb469.chunk.js",
-    "main.js.map": "/single-page-site/static/js/main.bb2fb469.chunk.js.map",
+    "main.css": "/single-page-site/static/css/main.07f1af77.chunk.css",
+    "main.js": "/single-page-site/static/js/main.b63d7a40.chunk.js",
+    "main.js.map": "/single-page-site/static/js/main.b63d7a40.chunk.js.map",
     "runtime-main.js": "/single-page-site/static/js/runtime-main.1f5746ac.js",
     "runtime-main.js.map": "/single-page-site/static/js/runtime-main.1f5746ac.js.map",
-    "static/js/2.748efb63.chunk.js": "/single-page-site/static/js/2.748efb63.chunk.js",
-    "static/js/2.748efb63.chunk.js.map": "/single-page-site/static/js/2.748efb63.chunk.js.map",
+    "static/js/2.1fc50038.chunk.js": "/single-page-site/static/js/2.1fc50038.chunk.js",
+    "static/js/2.1fc50038.chunk.js.map": "/single-page-site/static/js/2.1fc50038.chunk.js.map",
     "index.html": "/single-page-site/index.html",
-    "precache-manifest.f600aa069cfab9b6b64d48deec9c53e9.js": "/single-page-site/precache-manifest.f600aa069cfab9b6b64d48deec9c53e9.js",
+    "precache-manifest.ac857c5a176a4c7151cdccf46c709a51.js": "/single-page-site/precache-manifest.ac857c5a176a4c7151cdccf46c709a51.js",
     "service-worker.js": "/single-page-site/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/single-page-site/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.748efb63.chunk.js.LICENSE.txt": "/single-page-site/static/js/2.748efb63.chunk.js.LICENSE.txt",
-    "static/media/Alexander-CV.pdf": "/single-page-site/static/media/Alexander-CV.c59b5569.pdf",
-    "static/media/logo.svg": "/single-page-site/static/media/logo.5d5d9eef.svg"
+    "static/css/main.07f1af77.chunk.css.map": "/single-page-site/static/css/main.07f1af77.chunk.css.map",
+    "static/js/2.1fc50038.chunk.js.LICENSE.txt": "/single-page-site/static/js/2.1fc50038.chunk.js.LICENSE.txt",
+    "static/media/Alexander-CV.pdf": "/single-page-site/static/media/Alexander-CV.c59b5569.pdf"
   },
   "entrypoints": [
     "static/js/runtime-main.1f5746ac.js",
-    "static/js/2.748efb63.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.bb2fb469.chunk.js"
+    "static/js/2.1fc50038.chunk.js",
+    "static/css/main.07f1af77.chunk.css",
+    "static/js/main.b63d7a40.chunk.js"
   ]
 }
