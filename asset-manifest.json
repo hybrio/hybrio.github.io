@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/single-page-site/static/css/main.ccb98e4b.chunk.css",
-    "main.js": "/single-page-site/static/js/main.611f6c5e.chunk.js",
-    "main.js.map": "/single-page-site/static/js/main.611f6c5e.chunk.js.map",
+    "main.css": "/single-page-site/static/css/main.df54a039.chunk.css",
+    "main.js": "/single-page-site/static/js/main.22b2b1f6.chunk.js",
+    "main.js.map": "/single-page-site/static/js/main.22b2b1f6.chunk.js.map",
     "runtime-main.js": "/single-page-site/static/js/runtime-main.1f5746ac.js",
     "runtime-main.js.map": "/single-page-site/static/js/runtime-main.1f5746ac.js.map",
-    "static/js/2.8c2d78ae.chunk.js": "/single-page-site/static/js/2.8c2d78ae.chunk.js",
-    "static/js/2.8c2d78ae.chunk.js.map": "/single-page-site/static/js/2.8c2d78ae.chunk.js.map",
+    "static/js/2.af9e4327.chunk.js": "/single-page-site/static/js/2.af9e4327.chunk.js",
+    "static/js/2.af9e4327.chunk.js.map": "/single-page-site/static/js/2.af9e4327.chunk.js.map",
     "index.html": "/single-page-site/index.html",
-    "precache-manifest.b7bd2d82a29881e024c5571b8d9a59b1.js": "/single-page-site/precache-manifest.b7bd2d82a29881e024c5571b8d9a59b1.js",
+    "precache-manifest.659a9e0e0d381133d5743f04cd049358.js": "/single-page-site/precache-manifest.659a9e0e0d381133d5743f04cd049358.js",
     "service-worker.js": "/single-page-site/service-worker.js",
-    "static/css/main.ccb98e4b.chunk.css.map": "/single-page-site/static/css/main.ccb98e4b.chunk.css.map",
-    "static/js/2.8c2d78ae.chunk.js.LICENSE.txt": "/single-page-site/static/js/2.8c2d78ae.chunk.js.LICENSE.txt",
-    "static/media/Alexander-CV.pdf": "/single-page-site/static/media/Alexander-CV.c59b5569.pdf"
+    "static/css/main.df54a039.chunk.css.map": "/single-page-site/static/css/main.df54a039.chunk.css.map",
+    "static/js/2.af9e4327.chunk.js.LICENSE.txt": "/single-page-site/static/js/2.af9e4327.chunk.js.LICENSE.txt",
+    "static/media/Alexander-CV.pdf": "/single-page-site/static/media/Alexander-CV.c59b5569.pdf",
+    "static/media/me-grey.jpg": "/single-page-site/static/media/me-grey.e36091cd.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.1f5746ac.js",
-    "static/js/2.8c2d78ae.chunk.js",
-    "static/css/main.ccb98e4b.chunk.css",
-    "static/js/main.611f6c5e.chunk.js"
+    "static/js/2.af9e4327.chunk.js",
+    "static/css/main.df54a039.chunk.css",
+    "static/js/main.22b2b1f6.chunk.js"
   ]
 }
