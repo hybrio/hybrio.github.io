@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/single-page-site/static/css/main.0517dd8d.chunk.css",
+    "main.css": "/single-page-site/static/css/main.71496a89.chunk.css",
     "main.js": "/single-page-site/static/js/main.645ed3b7.chunk.js",
     "main.js.map": "/single-page-site/static/js/main.645ed3b7.chunk.js.map",
     "runtime-main.js": "/single-page-site/static/js/runtime-main.1f5746ac.js",
@@ -8,16 +8,16 @@
     "static/js/2.a9db9bf0.chunk.js": "/single-page-site/static/js/2.a9db9bf0.chunk.js",
     "static/js/2.a9db9bf0.chunk.js.map": "/single-page-site/static/js/2.a9db9bf0.chunk.js.map",
     "index.html": "/single-page-site/index.html",
-    "precache-manifest.02ea1c5769520c30348582677639778a.js": "/single-page-site/precache-manifest.02ea1c5769520c30348582677639778a.js",
+    "precache-manifest.a87cea5bf11d9b5f6305c6d7c972c5c2.js": "/single-page-site/precache-manifest.a87cea5bf11d9b5f6305c6d7c972c5c2.js",
     "service-worker.js": "/single-page-site/service-worker.js",
-    "static/css/main.0517dd8d.chunk.css.map": "/single-page-site/static/css/main.0517dd8d.chunk.css.map",
+    "static/css/main.71496a89.chunk.css.map": "/single-page-site/static/css/main.71496a89.chunk.css.map",
     "static/js/2.a9db9bf0.chunk.js.LICENSE.txt": "/single-page-site/static/js/2.a9db9bf0.chunk.js.LICENSE.txt",
     "static/media/Alexander-CV.pdf": "/single-page-site/static/media/Alexander-CV.c59b5569.pdf"
   },
   "entrypoints": [
     "static/js/runtime-main.1f5746ac.js",
     "static/js/2.a9db9bf0.chunk.js",
-    "static/css/main.0517dd8d.chunk.css",
+    "static/css/main.71496a89.chunk.css",
     "static/js/main.645ed3b7.chunk.js"
   ]
 }
