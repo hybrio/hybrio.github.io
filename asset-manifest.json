@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/single-page-site/static/css/main.a446acab.chunk.css",
+    "main.css": "/single-page-site/static/css/main.51b36dbd.chunk.css",
     "main.js": "/single-page-site/static/js/main.44fc5204.chunk.js",
     "main.js.map": "/single-page-site/static/js/main.44fc5204.chunk.js.map",
     "runtime-main.js": "/single-page-site/static/js/runtime-main.1f5746ac.js",
@@ -8,9 +8,9 @@
     "static/js/2.af9e4327.chunk.js": "/single-page-site/static/js/2.af9e4327.chunk.js",
     "static/js/2.af9e4327.chunk.js.map": "/single-page-site/static/js/2.af9e4327.chunk.js.map",
     "index.html": "/single-page-site/index.html",
-    "precache-manifest.1b786ec543e19b9dbe669d8b38fc49bb.js": "/single-page-site/precache-manifest.1b786ec543e19b9dbe669d8b38fc49bb.js",
+    "precache-manifest.e7cc192ee997bef4d6cfba8c7642a04a.js": "/single-page-site/precache-manifest.e7cc192ee997bef4d6cfba8c7642a04a.js",
     "service-worker.js": "/single-page-site/service-worker.js",
-    "static/css/main.a446acab.chunk.css.map": "/single-page-site/static/css/main.a446acab.chunk.css.map",
+    "static/css/main.51b36dbd.chunk.css.map": "/single-page-site/static/css/main.51b36dbd.chunk.css.map",
     "static/js/2.af9e4327.chunk.js.LICENSE.txt": "/single-page-site/static/js/2.af9e4327.chunk.js.LICENSE.txt",
     "static/media/Alexander-CV.pdf": "/single-page-site/static/media/Alexander-CV.c59b5569.pdf",
     "static/media/me-grey.jpg": "/single-page-site/static/media/me-grey.e36091cd.jpg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.1f5746ac.js",
     "static/js/2.af9e4327.chunk.js",
-    "static/css/main.a446acab.chunk.css",
+    "static/css/main.51b36dbd.chunk.css",
     "static/js/main.44fc5204.chunk.js"
   ]
 }
