@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/single-page-site/static/css/main.b0fa47c4.chunk.css",
-    "main.js": "/single-page-site/static/js/main.53fc1b8f.chunk.js",
-    "main.js.map": "/single-page-site/static/js/main.53fc1b8f.chunk.js.map",
+    "main.css": "/single-page-site/static/css/main.1f598ce3.chunk.css",
+    "main.js": "/single-page-site/static/js/main.8c5e7973.chunk.js",
+    "main.js.map": "/single-page-site/static/js/main.8c5e7973.chunk.js.map",
     "runtime-main.js": "/single-page-site/static/js/runtime-main.4a82b00c.js",
     "runtime-main.js.map": "/single-page-site/static/js/runtime-main.4a82b00c.js.map",
     "static/js/2.385b4108.chunk.js": "/single-page-site/static/js/2.385b4108.chunk.js",
     "static/js/2.385b4108.chunk.js.map": "/single-page-site/static/js/2.385b4108.chunk.js.map",
     "index.html": "/single-page-site/index.html",
-    "static/css/main.b0fa47c4.chunk.css.map": "/single-page-site/static/css/main.b0fa47c4.chunk.css.map",
+    "static/css/main.1f598ce3.chunk.css.map": "/single-page-site/static/css/main.1f598ce3.chunk.css.map",
     "static/js/2.385b4108.chunk.js.LICENSE.txt": "/single-page-site/static/js/2.385b4108.chunk.js.LICENSE.txt",
     "static/media/Alexander-CV.d1178bb9.pdf": "/single-page-site/static/media/Alexander-CV.d1178bb9.pdf",
     "static/media/me-grey.fe557ed0.jpg": "/single-page-site/static/media/me-grey.fe557ed0.jpg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.4a82b00c.js",
     "static/js/2.385b4108.chunk.js",
-    "static/css/main.b0fa47c4.chunk.css",
-    "static/js/main.53fc1b8f.chunk.js"
+    "static/css/main.1f598ce3.chunk.css",
+    "static/js/main.8c5e7973.chunk.js"
   ]
 }
