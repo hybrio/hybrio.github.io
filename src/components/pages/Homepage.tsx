@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { Link } from 'react-router-dom';
 import MyCV from '../../assets/Alexander-CV-2025-public.pdf';
 import Typer from '../Typer';
+import statements from '../Statements';
 
 class Homepage extends Component {
   render() {
@@ -34,13 +35,7 @@ class Homepage extends Component {
         <div id="content">
           <Typer
             heading="My name is Alexander,"
-            dataText={[
-              'I make things.',
-              'I develop applications.',
-              'I design backend systems.',
-              'I build tooling.',
-              'I integrate cloud platforms.',
-            ]}
+            dataText={statements}
           />
         </div>
       </>

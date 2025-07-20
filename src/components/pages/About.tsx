@@ -25,13 +25,13 @@ class AboutPage extends Component {
             <br />
             <br />
             <br />
-            I am a software developer from Auckland, New Zealand who enjoys writing code and solving problems.
+            I’m a full-stack software developer based in Auckland with seven years of industry experience. 
             <br />
             <br />
-            I am a 2020 Computer Systems Engineering (Hons) Graduate from the University of Auckland.
+            I’ve built scalable systems, worked on AI-driven feature development, and enjoy solving complex technical problems.
             <br />
             <br />
-            Unfortunately I don’t have anything too exciting to show you as of yet (I’m still retrieving my older uni projects) but watch this space.
+            I’m currently working on making some of my older projects available — watch this space!
           </p>
         </div>
       </div>
