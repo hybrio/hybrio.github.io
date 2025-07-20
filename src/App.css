@@ -79,13 +79,6 @@ a:link {
   animation: blink .7s steps(1) infinite;
 }
 
-#about {
-  width: 75%;
-  padding-left: 10%;
-  margin-top: 20%;
-  height: fit-content;
-}
-
 @keyframes blink {
   50% {
     border-color: transparent;
@@ -98,6 +91,13 @@ a:link {
   margin-top: 5%;
   height: fit-content;
 }
+
+@media only screen and (max-width: 600px) {
+  #about {
+    margin-top: 20%;
+  }
+}
+
 #about-text {
   margin-left: 1%;
   margin-top: 1%;
