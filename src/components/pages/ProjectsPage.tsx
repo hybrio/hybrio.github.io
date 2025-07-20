@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import TagChecker from '../TagChecker';
 import parse from 'html-react-parser';
@@ -35,7 +35,7 @@ class ProjectsPage extends Component<{}, ProjectsPageState> {
   componentDidMount() {
     const myRequest = new Request('https://api.github.com/users/hybrio/starred');
   
-    const whitelist = ['EmbeddingMap', 'Boids', 'VisualGit_SE701_2019_4', 'DLOplanTool', 'JuliaParallelGraphing']; // ✅ Your project names
+    const whitelist = ['EmbeddingMap', 'Boids', 'VisualGit_SE701_2019_4', 'DLOplanTool', ' JuliaParallelGraphing']; // ✅ Your project names
   
     fetch(myRequest)
       .then((response) => response.json())
@@ -108,9 +108,7 @@ class ProjectsPage extends Component<{}, ProjectsPageState> {
                 rel="noopener noreferrer"
                 onMouseEnter={() => this.updatePreview(project.data || '')}
               >
-                <TagChecker name={project.name} target={project.html_url} data={project.data}>
-                  {project.name}
-                </TagChecker>
+                <TagChecker name={project.name} target={project.html_url} data={project.data} />
               </a>
             ))}
           </ul>
