@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
+import type { ReactNode } from 'react';
+
 
 interface TagCheckerProps {
   name: string;
   archived?: boolean;
+  target?: string; // add this
+  data?: string | undefined; // add this
+  children?: ReactNode;
 }
 
 class TagChecker extends Component<TagCheckerProps> {
   render() {
-    let archivedElement;
-
-    if (this.props.archived) {
-      archivedElement = <div className="Archived">Archived</div>;
-    } else {
-      archivedElement = null;
-    }
+    const { name, archived, children } = this.props;
 
     return (
       <div className="Repository">
-        &nbsp;{this.props.name} {archivedElement}
+        &nbsp;{name} {archived ? <div className="Archived">Archived</div> : null}
+        {children}
       </div>
     );
   }
