@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
-import me from '../../assets/me-grey.jpg';
+import me from '../../assets/me-grey.jpeg';
 
 class AboutPage extends Component {
   render() {
