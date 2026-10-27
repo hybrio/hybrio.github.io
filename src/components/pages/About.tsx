@@ -30,7 +30,7 @@ class AboutPage extends Component {
             <br />
             <br />
             <br />
-            I’m a full-stack software developer based in Auckland with {experience} years of industry experience. 
+            I’m a senior software engineer based in Auckland with {experience} years of industry experience. 
             <br />
             <br />
             I’ve built scalable systems, worked on AI-driven feature development, and enjoy solving complex technical problems.

@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
-import MyCV from '../../assets/Alexander-CV-2025-public.pdf';
+import MyCV from '../../assets/Alexander-Maehl-CV-2026.pdf';
 import Typer from '../Typer';
 import statements from '../Statements';
 
