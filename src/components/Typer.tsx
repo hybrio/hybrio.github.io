@@ -29,8 +29,22 @@ class Typer extends Component<TyperProps, TyperState> {
     };
   }
 
+  private timeouts: number[] = [];
+
   componentDidMount() {
     this.handleType();
+  }
+
+  componentWillUnmount() {
+    this.timeouts.forEach(clearTimeout);
+  }
+
+  schedule(fn: () => void, delay: number) {
+    const id = window.setTimeout(() => {
+      this.timeouts = this.timeouts.filter((t) => t !== id);
+      fn();
+    }, delay);
+    this.timeouts.push(id);
   }
 
   handleType = () => {
@@ -50,7 +64,7 @@ class Typer extends Component<TyperProps, TyperState> {
     });
 
     if (!isDeleting && updatedText === fullText) {
-      setTimeout(() => this.setState({ isDeleting: true }), 500);
+      this.schedule(() => this.setState({ isDeleting: true }), 500);
     } else if (isDeleting && updatedText === '') {
       this.setState({
         isDeleting: false,
@@ -58,7 +72,7 @@ class Typer extends Component<TyperProps, TyperState> {
       });
     }
 
-    setTimeout(this.handleType, typingSpeed);
+    this.schedule(this.handleType, typingSpeed);
   };
 
   render() {

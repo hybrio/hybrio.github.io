@@ -24,9 +24,9 @@ class AboutPage extends Component {
           </ul>
         </nav>
         <div id="about">
-          <img className="portrait" src={me} alt="image of me" />
+          <img className="portrait" src={me} alt="Portrait of Alexander Maehl" />
           <p id="about-text">
-            Hi I'm Alexander
+            Hi, I’m Alexander.
             <br />
             <br />
             <br />

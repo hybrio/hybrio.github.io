@@ -18,8 +18,8 @@ interface ProjectsPageState {
   previewData: string;
 }
 
-class ProjectsPage extends Component<{}, ProjectsPageState> {
-  constructor(props: {}) {
+class ProjectsPage extends Component<object, ProjectsPageState> {
+  constructor(props: object) {
     super(props);
     this.state = {
       projects: [],
@@ -33,9 +33,9 @@ class ProjectsPage extends Component<{}, ProjectsPageState> {
   }
 
   componentDidMount() {
-    const myRequest = new Request('https://api.github.com/users/hybrio/starred');
+    const myRequest = new Request('https://api.github.com/users/hybrio/starred?per_page=100');
   
-    const whitelist = ['EmbeddingMap', 'Boids', 'VisualGit_SE701_2019_4', 'DLOplanTool', ' JuliaParallelGraphing']; // ✅ Your project names
+    const whitelist = ['EmbeddingMap', 'Boids', 'VisualGit_SE701_2019_4', 'DLOplanTool', 'JuliaParallelGraphing']; // ✅ Your project names
   
     fetch(myRequest)
       .then((response) => response.json())
@@ -47,7 +47,7 @@ class ProjectsPage extends Component<{}, ProjectsPageState> {
           const readmeRequest = new Request(`${project.url}/readme`, {
             method: 'GET',
             headers: {
-              Accept: 'application/vnd.github.VERSION.html',
+              Accept: 'application/vnd.github.html+json',
             },
           });
   
