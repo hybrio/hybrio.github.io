@@ -3,18 +3,19 @@ import { Component } from 'react';
 
 interface TagCheckerProps {
   name: string;
+  description?: string | null;
   archived?: boolean;
-  target?: string; // add this
-  data?: string | undefined; // add this
 }
 
 class TagChecker extends Component<TagCheckerProps> {
   render() {
-    const { name, archived } = this.props;
+    const { name, description, archived } = this.props;
 
     return (
       <div className="Repository">
-        &nbsp;{name} {archived ? <div className="Archived">Archived</div> : null}
+        <span className="repoName">{name}</span>
+        {archived ? <div className="Archived">Archived</div> : null}
+        {description ? <span className="repoDescription">{description}</span> : null}
       </div>
     );
   }

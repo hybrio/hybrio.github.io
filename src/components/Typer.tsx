@@ -76,10 +76,15 @@ class Typer extends Component<TyperProps, TyperState> {
   };
 
   render() {
+    const { heading = '', dataText } = this.props;
+    // Courier is monospace, so sizing the line in ch to fit the longest
+    // statement keeps it from shifting as text is typed and deleted.
+    const longest = Math.max(0, ...dataText.map((text) => text.length));
+
     return (
       <div id="test">
-        <h2 className="typer">
-          {this.props.heading}&nbsp;
+        <h2 className="typer" style={{ width: `${heading.length + longest + 2}ch` }}>
+          <span className="typerHeading">{heading}&nbsp;</span>
           <span>{this.state.text}</span>
           <span id="cursor" />
         </h2>

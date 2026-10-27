@@ -8,116 +8,134 @@ interface GitHubProject {
   name: string;
   html_url: string;
   url: string;
-  data?: string;
+  description: string | null;
 }
 
 interface ProjectsPageState {
   projects: GitHubProject[];
-  width: number;
-  height: number;
-  previewData: string;
+  status: 'loading' | 'loaded' | 'error';
+  selected: string | null;
+  readmes: Record<string, string>;
 }
 
+// Repos to show, in display order, with human-friendly names
+const showcase: Record<string, string> = {
+  EmbeddingMap: 'Embedding Map',
+  Boids: 'Boids',
+  VisualGit_SE701_2019_4: 'VisualGit (SE701)',
+  DLOplanTool: 'DLO Plan Tool',
+  JuliaParallelGraphing: 'Julia Parallel Graphing',
+};
+const showcaseOrder = Object.keys(showcase);
+
+const README_UNAVAILABLE =
+  '<p>This README couldn’t be loaded right now. Select the project name to view it on GitHub.</p>';
+
 class ProjectsPage extends Component<object, ProjectsPageState> {
+  private requestedReadmes = new Set<string>();
+
   constructor(props: object) {
     super(props);
     this.state = {
       projects: [],
-      width: 0,
-      height: 0,
-      previewData:
-        '<div style="display: flex; align-items: center; justify-content: center; height: 50vw;">Please hover a repository to view its README.md file</div>',
+      status: 'loading',
+      selected: null,
+      readmes: {},
     };
-
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
   componentDidMount() {
     document.title = 'Projects | Alexander Maehl';
 
-    const myRequest = new Request('https://api.github.com/users/hybrio/starred?per_page=100');
-  
-    const whitelist = ['EmbeddingMap', 'Boids', 'VisualGit_SE701_2019_4', 'DLOplanTool', 'JuliaParallelGraphing']; // ✅ Your project names
-  
-    fetch(myRequest)
-      .then((response) => response.json())
+    fetch('https://api.github.com/users/hybrio/starred?per_page=100')
+      .then((response) => (response.ok ? response.json() : Promise.reject(response.status)))
       .then((data: GitHubProject[]) => {
-        const filtered = data.filter((project) => whitelist.includes(project.name));
-        this.setState({ projects: filtered });
-  
-        filtered.forEach((project, key) => {
-          const readmeRequest = new Request(`${project.url}/readme`, {
-            method: 'GET',
-            headers: {
-              Accept: 'application/vnd.github.html+json',
-            },
-          });
-  
-          fetch(readmeRequest)
-            .then((response) => response.text())
-            .then((readmeHTML: string) => {
-              this.setState((prevState) => {
-                const updatedProjects = [...prevState.projects];
-                updatedProjects[key] = { ...updatedProjects[key], data: readmeHTML };
-                return { projects: updatedProjects };
-              });
-            });
-        });
+        const projects = data
+          .filter((project) => project.name in showcase)
+          .sort((a, b) => showcaseOrder.indexOf(a.name) - showcaseOrder.indexOf(b.name));
+        this.setState({ projects, status: projects.length ? 'loaded' : 'error' });
+        if (projects.length) this.selectProject(projects[0]);
+      })
+      .catch(() => this.setState({ status: 'error' }));
+  }
+
+  selectProject = (project: GitHubProject) => {
+    this.setState({ selected: project.name });
+    if (this.requestedReadmes.has(project.name)) return;
+    this.requestedReadmes.add(project.name);
+
+    fetch(`${project.url}/readme`, {
+      headers: { Accept: 'application/vnd.github.html+json' },
+    })
+      .then((response) => (response.ok ? response.text() : Promise.reject(response.status)))
+      .catch(() => README_UNAVAILABLE)
+      .then((readmeHTML: string) => {
+        this.setState((prevState) => ({
+          readmes: { ...prevState.readmes, [project.name]: readmeHTML },
+        }));
       });
-  
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
-  }
-  
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
-  }
-
-  updateWindowDimensions() {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
-  }
-
-  updatePreview = (data: string) => {
-    this.setState({ previewData: data });
   };
 
-  render() {
-    const { projects, width, previewData } = this.state;
+  renderList() {
+    const { projects, status, selected } = this.state;
+
+    if (status === 'loading') {
+      return <p className="projectStatus">Loading projects…</p>;
+    }
+    if (status === 'error') {
+      return (
+        <p className="projectStatus">
+          Couldn’t load projects from GitHub right now. You can find them on{' '}
+          <a href="https://github.com/hybrio" target="_blank" rel="noopener noreferrer">
+            my GitHub profile
+          </a>
+          .
+        </p>
+      );
+    }
 
     return (
-      <div>
+      <ul className="projectList">
+        {projects.map((project) => (
+          <li key={`project-${project.id}`}>
+            <a
+              href={project.html_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`projectLink${selected === project.name ? ' selected' : ''}`}
+              onMouseEnter={() => this.selectProject(project)}
+              onFocus={() => this.selectProject(project)}
+            >
+              <TagChecker name={showcase[project.name]} description={project.description} />
+            </a>
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
+  render() {
+    const { selected, readmes } = this.state;
+    const preview = selected ? readmes[selected] : undefined;
+
+    return (
+      <div className="projectsLayout">
         <nav className="pageNav">
           <ul className="pageNavList">
             <li>
               <h1 className="Heading">Projects.</h1>
             </li>
-            <li id="noPaddingOrMargin">
-              <Link to="/" id="noPaddingOrMargin">
-                <h1 id="noPaddingOrMargin" className="grow">
-                  {'<'}
-                </h1>
+            <li>
+              <Link to="/" className="backLink grow" aria-label="Back to home">
+                {'<'}
               </Link>
             </li>
           </ul>
-
-          <ul className="projectList">
-            {projects.map((project) => (
-              <a
-                key={`project-${project.id}`}
-                href={project.html_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                onMouseEnter={() => this.updatePreview(project.data || '')}
-              >
-                <TagChecker name={project.name} target={project.html_url} data={project.data} />
-              </a>
-            ))}
-          </ul>
+          {this.renderList()}
         </nav>
 
-        <div id="projects">
-          {width >= 768 ? <div className="markdown-body">{parse(previewData)}</div> : null}
+        <div className="markdown-body" aria-live="polite">
+          {preview ? parse(preview) : selected ? <p>Loading README…</p> : null}
         </div>
       </div>
     );

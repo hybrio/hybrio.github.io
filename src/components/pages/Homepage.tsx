@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import MyCV from '../../assets/Alexander-Maehl-CV-2026.pdf';
 import Typer from '../Typer';
 import statements from '../Statements';
+import ContactLinks from '../ContactLinks';
 
 class Homepage extends Component {
   componentDidMount() {
@@ -21,7 +22,9 @@ class Homepage extends Component {
                 target="_blank"
                 className="link"
               >
-                <h1 className="grow">Curriculum vitae.</h1>
+                <h1 className="grow">
+                  Curriculum vitae.<span className="fileHint"> (PDF)</span>
+                </h1>
               </a>
             </li>
             <li className="homePageNavItem">
@@ -42,6 +45,7 @@ class Homepage extends Component {
             dataText={statements}
           />
         </div>
+        <ContactLinks className="homeContactLinks" />
       </>
     );
   }

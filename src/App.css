@@ -3,19 +3,14 @@
   width: 100%;
 }
 
-.portrait{
-  height: max(18vh,18vw);
-  position: absolute;
-  left: 33%;
-}
-
 .typer{
-  margin-left: 1%;
-  margin-top: 0;
-  padding-top: 25%;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 25% 16px 0;
   font-family: "Courier New", Courier, monospace;
   font-style: oblique;
-  text-align: center;
+  text-align: left;
 }
 
 a:link {
@@ -32,8 +27,7 @@ a:link {
 .pageNav{
   width:  fit-content;
   height: fit-content;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0;
+  padding-top: 16px;
 }
 
 .pageNavList{
@@ -45,11 +39,37 @@ a:link {
   flex-direction: column;
 }
 
+.backLink{
+  display: inline-block;
+  min-width: 44px;
+  padding: 4px 16px 4px 0;
+  font-size: max(4vh,4vw);
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.backLink:visited{
+  color: rgb(0, 0, 0);
+}
+
+/* Projects */
+
+.projectsLayout{
+  display: flex;
+  flex-direction: column;
+}
+
 .projectList{
   list-style-type: none;
   height: fit-content;
+  margin: 8px 0 24px;
   display: flex;
   flex-direction: column;
+}
+
+.projectLink{
+  display: block;
+  padding: 4px 16px 4px 0;
 }
 
 .Repository{
@@ -61,12 +81,43 @@ a:link {
   font-size: max(2vh,2vw);
 }
 
-#noPaddingOrMargin{
-  font-size: max(4vh,4vw);
-  color: rgb(0, 0, 0);
-  height: fit-content;
-  margin: 0px 0px 0px 0px;
+.repoName{
+  border-bottom: 1px solid transparent;
 }
+
+.projectLink:hover .repoName,
+.projectLink:focus-visible .repoName,
+.projectLink.selected .repoName{
+  color: rgb(131, 161, 98);
+  border-bottom-color: rgb(131, 161, 98);
+}
+
+.repoDescription{
+  display: block;
+  max-width: 40ch;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 0.8em;
+  line-height: 1.4;
+  color: rgb(85, 85, 85);
+}
+
+.projectStatus{
+  max-width: 40ch;
+  padding: 0 16px 0 40px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.projectStatus a{
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  text-decoration-color: rgb(131, 161, 98);
+}
+
+.markdown-body{
+  display: none;
+}
+
+/* Typer cursor */
 
 #content{
   height: min(calc(100% - 18vh), calc(100% - 18vw));
@@ -85,34 +136,68 @@ a:link {
   }
 }
 
+/* About */
+
 #about {
-  width: 75%;
-  padding-left: 10%;
-  margin-top: 5%;
-  height: fit-content;
-}
-
-@media only screen and (max-width: 600px) {
-  #about {
-    margin-top: 20%;
-  }
-}
-
-#about-text {
-  margin-left: 1%;
-  margin-top: 1%;
+  max-width: 70ch;
+  margin-top: 16px;
+  padding: 0 16px 32px 40px;
   font-family: "Courier New", Courier, monospace;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding-top: calc(max(19vh,19vw));
-  text-align: left;
 }
 
-#back{
-  width: 75%;
-  padding-left: 0;
+.portrait{
+  display: block;
+  height: clamp(160px, 18vw, 280px);
+  width: auto;
+  max-width: 100%;
 }
+
+#about-text p {
+  margin: 1em 0 0;
+  line-height: 1.5;
+}
+
+#about-text a {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  text-decoration-color: rgb(131, 161, 98);
+}
+
+/* Contact links */
+
+.contactLinks{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 32px 0 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.contactLinks a{
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid transparent;
+}
+
+.contactLinks a:hover,
+.contactLinks a:focus-visible{
+  color: rgb(131, 161, 98);
+  border-bottom-color: rgb(131, 161, 98);
+}
+
+.homeContactLinks{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  margin: 0;
+  padding: 16px;
+  background: white;
+}
+
+/* Home */
 
 .homePageNav{
   padding-left: 0px;
@@ -131,13 +216,23 @@ a:link {
 }
 
 .link > .grow{
-  color: black; 
+  color: black;
   font-family: "Helvetica Neue", Helvetica, monospace;
   font-weight: normal;
   font-size: max(4vh,4vw);
   margin-top: 0px;
 }
 
+.fileHint{
+  font-size: 0.5em;
+  color: rgb(102, 102, 102);
+}
+
+@media only screen and (max-width: 767px) {
+  .typerHeading{
+    display: block;
+  }
+}
 
 @media only screen and (min-width: 768px) { /*style changes for desktop users*/
 
@@ -157,22 +252,16 @@ a:link {
     font-size: max(2vh,2vw);
   }
 
-  #noPaddingOrMargin{
+  .backLink{
     font-size: max(2vh,2vw);
-    height: fit-content;
-    margin: 0px 0px 0px 0px;
   }
-  
+
   .Repository{
     font-size: 100%;
   }
 
   #Heading{
     font-size: max(2vh,2vw);
-  }
-  #about-text {
-    padding-top: calc(max(18vh,18vw));
-    text-align: left;
   }
   #content{
     height: min(calc(100% - 3vh), calc(100% - 3vw));
@@ -185,10 +274,34 @@ a:link {
   }
   .grow:hover { transform: scale(1.05); }
 
+  .projectsLayout{
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .projectsLayout .pageNav{
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    flex: 0 0 300px;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+
   .markdown-body {
-		box-sizing: border-box;
-		min-width: 200px;
-		max-width: 1280px;
-		padding-left: 19%;
-	}
+    display: block;
+    flex: 1;
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: 960px;
+    padding: 32px 24px 48px 0;
+  }
+
+  .markdown-body img {
+    max-width: 100%;
+  }
+
+  .markdown-body pre {
+    overflow-x: auto;
+  }
 }
