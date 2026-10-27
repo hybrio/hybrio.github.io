@@ -8,6 +8,10 @@ const experienceYears = currentYear - 2018;
 const experience = toWords(experienceYears);
 
 class AboutPage extends Component {
+  componentDidMount() {
+    document.title = 'About | Alexander Maehl';
+  }
+
   render() {
     return (
       <div>

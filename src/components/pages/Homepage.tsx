@@ -5,6 +5,10 @@ import Typer from '../Typer';
 import statements from '../Statements';
 
 class Homepage extends Component {
+  componentDidMount() {
+    document.title = 'Alexander Maehl | Senior Software Engineer, Auckland';
+  }
+
   render() {
     return (
       <>

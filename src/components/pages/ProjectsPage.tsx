@@ -33,6 +33,8 @@ class ProjectsPage extends Component<object, ProjectsPageState> {
   }
 
   componentDidMount() {
+    document.title = 'Projects | Alexander Maehl';
+
     const myRequest = new Request('https://api.github.com/users/hybrio/starred?per_page=100');
   
     const whitelist = ['EmbeddingMap', 'Boids', 'VisualGit_SE701_2019_4', 'DLOplanTool', 'JuliaParallelGraphing']; // ✅ Your project names
